@@ -1,0 +1,183 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+body {
+  background-color: crimson;
+}
+
+p{
+ font-family: 'Bagel Fat One';
+ font-size: 40px;
+ text-align: center;
+ animation: wobble 2.5s infinite;
+}
+
+.container {
+  height: 31.25em;
+  width: 31.25em;
+  /* border: 2px solid rgb(49, 49, 49); */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.ufo {
+  height: 16.87em;
+  width: 11.25em;
+  background: linear-gradient(to bottom, lightgrey 90%, rgb(49, 49, 70) 90%);
+  border-radius: 11.25em 11.25em 0 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 40%;
+  animation: float 3s infinite;
+
+
+}
+
+/* @keyframes float{
+    50%{
+        top:calc(zzzzzzzzz)
+    }
+} */
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+.ufo:before {
+  position: absolute;
+  content: "";
+  width: 11.25em;
+  height: 5.62em;
+  background-color: rgb(65, 65, 90);
+  border-radius: 0 0 5.62em 5.62em;
+  bottom: -5.62em;
+  z-index: 100;
+}
+
+.ufo:after {
+  position: absolute;
+  content: "";
+  height: 1.25em;
+  width: 7.5em;
+  border: 0.62em solid rgb(49, 49, 49);
+  border-radius: 7.5em 7.5em 0 0;
+  left: 1.5em;
+  border-bottom: none;
+  top: 20.62em;
+}
+
+.alien {
+    position: absolute;
+    height: 11.25em;
+    width: 8.75em;
+    background-color: black;
+    border-radius: 8.75em 8.75em 0 0;
+  z-index: 2;
+    /* Centering the alien inside the UFO */
+    left: 50%; /* Center horizontally in the container */
+    top: 43.5%; /* Center vertically in the container */
+    transform: translate(-50%, -50%); /* Adjust for the size of the alien */
+  }
+  
+
+  
+/* .alien {
+  position: absolute;
+  height: 11.25em;
+  width: 8.75em;
+  background-color: darkred;
+  left: 1.25em;
+  top: 3.93em;
+  border-radius: 8.75em 8.75em 0 0;
+} */
+
+.alien:before {
+  content: "";
+  position: absolute;
+  height: 5.62em;
+  width: 5.26em;
+  background-color: white;
+  border-radius: 50%;
+  left: 1.56em;
+  top: 2em;
+  /* top: 1.87; */
+}
+
+.alien:after{
+    position: absolute;
+    content: "";
+    height: 1.25em;
+    width: 2.5em;
+    border: 0.5em solid crimson;
+    border-bottom: transparent;
+    border-radius: 3.75em 3.75em 0 0;
+    left: 2.5em;
+    top: 3.60em;
+
+}
+
+.mouth{
+    position: absolute;
+    height: 1.25em;
+    width: 2.5em;
+    background-color:crimson ;
+    border-radius: 2.5em 2.5em 0.31em 0.31em ;
+    /* border-radius: 0.31em 0.31em 2.5em 2.5em; */
+    left: 3.12em;
+    top: 8.75em;
+}
+
+
+.details, .details:before{
+    height: 1.56em ;
+    width: 3.12em;
+    border: 0.5em solid black;
+    border-top: none;
+    border-radius: 3.12em 3.12em 0 0;
+}
+.details{
+    transform: rotate(-146deg) ;
+}
+
+details:before{
+    position: absolute;
+    content: "";
+    transform: rotate(-130deg);
+    left: 1.87em;
+    bottom: 4.68em;
+
+}
+
+/* @media screen and (min-width: 700px){
+    .container{
+        font-size: 20px;
+    }
+} */
+
